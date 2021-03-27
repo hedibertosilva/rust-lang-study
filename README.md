@@ -7,6 +7,9 @@ My goals is to keep my progress registered.
 
 ____________________
 
+## Notes
+
+--------------------
 #### Structure
 
 ```
