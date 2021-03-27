@@ -1,7 +1,22 @@
+use std::io;
+
 fn main() {
-    let guess:u8 = "42".parse().expect("Parse failed!");
-    println!("{}", guess);
-    let _guess2 = 2.0;
+    let a = [1, 2, 3, 4, 5];
+    
+    println!("Type a index");
+
+    let mut index = String::new();
+
+    io::stdin()
+             .read_line(&mut index)
+             .expect("Please type a valid index!");
+    
+    let index:usize = index.trim()
+                           .parse()
+                           .expect("It is not a valid number");
+
+    println!("The value of index {} is {}", index, a[index]);
+
 }
 
 /*
@@ -75,5 +90,55 @@ fn main() {
             let heart_eyed_cat = '😻';
         }
 
+
+    Compound Types
+
+    * Tuple
+        It's fixed lenght. 
+
+        fn main() {
+            let tup: (i32, f64, u8) = (500, 6.4, 1);
+        }
+
+        It's possible to destructure a tup.
+
+        fn main() {
+            let example = (1, 2, 3);
+            let (x, y, z) = example;
+
+            println!("{}", x); // 1
+            println!("{}", y); // 2
+            println!("{}", z); // 3
+        }
+
+        It's possible to access the values directly.
+
+        fn main() {
+            let example = (1, 2, 3);
+            
+            println!("{}", example.0); // 1
+            println!("{}", example.1); // 2
+            println!("{}", example.2); // 3
+        }
+
+    * Array
+
+        All values in array must have the same type. 
+        Arrays in Rust are different  from arrays in some other languages because
+        arrays in Rust have a fixed lenght, like tuples.
+
+        fn main() {
+            let a[u8; 5] = [1, 2, 3, 4, 5];
+            let first = a[0];
+            let second = a[1];
+        }
+
+        Obs! dont accept negative nubmers to access the array!
+
+        ** Generating Arrays
+
+        fn main() {
+            let _a = [0; 5]; // [0, 0, 0, 0, 0]
+        }
 
 */
