@@ -8,6 +8,8 @@ My goals is to keep my progress registered.
 
 ## Notes
 
+- Rust is an expression-based language
+
 #### Structure
 
 ```
@@ -40,6 +42,10 @@ My goals is to keep my progress registered.
 ```
 
 #### Scalar Types
+
+    Signed = -2^(n-1) ~ +2^(n-1)-1
+    Unsigned = 0 ~ 2^(n)-1
+
     * Integers
         Length  Signed  Unsigned
         8-bit   i8      u8
@@ -131,3 +137,70 @@ My goals is to keep my progress registered.
         fn main() {
             let _a = [0; 5]; // [0, 0, 0, 0, 0]
         }
+    
+#### Functions
+
+    The functions can be defined somewhere.
+
+    * Functions can also be defined to have parameters. If they there are
+    parameters all of them must to declare each parameter type.
+
+    fn another_function(x: usize) {
+        println!("The values of x is: {}", x);
+    }
+
+    Difference between Statement and Expression declaration.
+
+    - Statement are instructions that perform some action and do not return a value. 
+
+    - Expressions evaluate to a resulting value.
+
+    fn main() {
+        let x = 5;
+
+        let y = {
+            let x = 3;
+            x+1
+        };
+
+        println!("The value of x is: {}", x);
+        println!("The value of y is: {}", y);
+    }
+
+    -*-
+
+    fn main() {
+        let x = five();
+        println!("x is equal {}", x);
+    }
+
+    fn five() -> u8 {
+        5
+    }
+
+#### IF ELSE
+
+    The condition needs must be a bool.
+
+    Rust will not automatically try to convert non-Boolean types to a Boolean.
+
+
+    - Structure:
+
+        if <condiction> {
+            <expression>
+        } else if <condiction> {
+            <expression>
+        } else {
+            <expression>
+        }
+
+        or
+
+        let number = if condiction { 5 } else { 6 };
+
+    Using too many else if expressions can clutter your code, 
+    so if you have more than one, you might want to refactor your code. 
+    Rust branching construct called match for these cases.
+
+    All expressions must have the same type.

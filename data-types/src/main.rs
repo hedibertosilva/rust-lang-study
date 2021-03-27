@@ -1,22 +1,8 @@
-use std::io;
-
 fn main() {
-    let a = [1, 2, 3, 4, 5];
-    
-    println!("Type a index");
 
-    let mut index = String::new();
+    let result:f64 = (0.1+0.7) * 10.0;
 
-    io::stdin()
-             .read_line(&mut index)
-             .expect("Please type a valid index!");
-    
-    let index:usize = index.trim()
-                           .parse()
-                           .expect("It is not a valid number");
-
-    println!("The value of index {} is {}", index, a[index]);
-
+    println!("{}", result); // 7.99999999999
 }
 
 /*
@@ -24,6 +10,9 @@ fn main() {
     Scalar Types
 
     * Integers
+
+        Signed = -2^(n-1) ~ +2^(n-1)-1
+        Unsigned = 0 ~ 2^(n)-1
 
         Length  Signed  Unsigned
         8-bit   i8      u8
@@ -140,5 +129,23 @@ fn main() {
         fn main() {
             let _a = [0; 5]; // [0, 0, 0, 0, 0]
         }
+
+        fn main() {
+            let full_name = ["hediberto", "cavalcante", "da", "silva"];
+
+            println!("Please type a index:");
+
+            let mut index = String::new();
+
+            std::io::stdin()
+                    .read_line(&mut index)
+                    .expect("Please type a valid index!");
+
+            let index:usize = index.trim().parse().expect("Type a valid index, please!");
+
+            println!("The index {} is equal to value {}.", index, full_name[index]);
+
+        }
+
 
 */
