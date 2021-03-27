@@ -5,11 +5,9 @@ This is a collection of projects based on the book The Rust Programming Language
 
 My goals is to keep my progress registered.
 
-____________________
 
 ## Notes
 
---------------------
 #### Structure
 
 ```
