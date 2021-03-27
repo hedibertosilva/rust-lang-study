@@ -48,13 +48,14 @@ My goals is to keep my progress registered.
         64-bit  i64     u64
         128-bit i128    u128
         arch    isize   usize
+        
         Number literals     Example
         Decimal             98_222
         Hex                 0xff
         Octal               0o77
         Binary              0b1111_0000
         Byte (u8 only)      b'A'
-    
+        
     * Floating-Point
         There are two primitive types for floating-point numbers.
         f32 = 32 bits -> single-precision
@@ -64,6 +65,7 @@ My goals is to keep my progress registered.
             let b:f64 = 2.2;
             let c = 2.4; // default f64
         }
+        
     * Numeric Operations
         fn main() {
             // addition
@@ -77,11 +79,13 @@ My goals is to keep my progress registered.
             // remainder
             let remainder = 43 % 5;
         }
+        
     * Booleans = 8 bits = 1 byte
         fn main() {
             let t = true;
             let f: bool = false; // with explicit type annotation
         }
+        
     * Characters = 32 bits = 4 bytes
         char literals are specified with single quotes, as opposed to string literals, which use double quotes.
         fn main() {
@@ -90,6 +94,7 @@ My goals is to keep my progress registered.
             let heart_eyed_cat = '😻';
         }
 #### Compound Types
+
     * Tuple
         It's fixed lenght. 
         fn main() {
@@ -111,6 +116,7 @@ My goals is to keep my progress registered.
             println!("{}", example.1); // 2
             println!("{}", example.2); // 3
         }
+        
     * Array
         All values in array must have the same type. 
         Arrays in Rust are different  from arrays in some other languages because
